@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 @import "react-date-picker/dist/DatePicker.css";
 @import "react-calendar/dist/Calendar.css";
+@import "react-accessible-accordion/dist/fancy-example.css";
 
 /* :root {
   --foreground-rgb: 0, 0, 0;
