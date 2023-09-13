@@ -6,10 +6,7 @@ import { ComplexComponentTreeSection } from "@/components/ComplexComponentTree/C
 import { ComplexComponentTreeSectionClient } from "@/components/ComplexComponentTree/ComplexComponentTreeSection.client";
 import { FC } from "react";
 import { FooForm } from "@/components/FooForm/FooForm";
-import Image from "next/image";
-import Link from "next/link";
 import { NavBar } from "@/components/NavBar";
-import { Snippet } from "@/components/SnippetSection/Snippets";
 import { SnippetsSection } from "@/components/SnippetSection/SnippetsSection";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import _ from "lodash";

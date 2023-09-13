@@ -2,8 +2,6 @@ import { FC, ReactNode } from "react";
 import { Section, SectionContent, SectionHeader } from "../helpers";
 import { Snippet as SnippetData, loadSnippets } from "@/services";
 
-import { Snippet } from "./Snippets";
-
 export const SnippetsSection: FC<{
   snippetList: ReactNode[];
 }> = ({ snippetList }) => {
