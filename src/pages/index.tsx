@@ -7,8 +7,8 @@ import { ComplexComponentTreeSectionClient } from "@/components/ComplexComponent
 import { FC } from "react";
 import { FooForm } from "@/components/FooForm/FooForm";
 import { NavBar } from "@/components/NavBar";
-import { SnippetsSection } from "@/components/SnippetSection/SnippetsSection";
-import SyntaxHighlighter from "react-syntax-highlighter";
+// import { SnippetsSection } from "@/components/SnippetSection/SnippetsSection";
+// import SyntaxHighlighter from "react-syntax-highlighter";
 import _ from "lodash";
 import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import moment from "moment";
@@ -19,18 +19,18 @@ export interface SnippetProps {
   snippet: SnippetData;
 }
 
-export const SnippetClient: FC<SnippetProps> = ({ snippet }) => {
-  const a = moment().format("MMMM Do YYYY, h:mm:ss a");
-  return (
-    <div className="z-10 max-w-5xl w-full items-center text-sm mb-8">
-      <h3 className="text-m font-bold mb-3">{snippet.title}</h3>
-      <div className="mb-3">{snippet.description}</div>
-      <SyntaxHighlighter language={snippet.language} style={docco}>
-        {snippet.code}
-      </SyntaxHighlighter>
-    </div>
-  );
-};
+// export const SnippetClient: FC<SnippetProps> = ({ snippet }) => {
+//   const a = moment().format("MMMM Do YYYY, h:mm:ss a");
+//   return (
+//     <div className="z-10 max-w-5xl w-full items-center text-sm mb-8">
+//       <h3 className="text-m font-bold mb-3">{snippet.title}</h3>
+//       <div className="mb-3">{snippet.description}</div>
+//       <SyntaxHighlighter language={snippet.language} style={docco}>
+//         {snippet.code}
+//       </SyntaxHighlighter>
+//     </div>
+//   );
+// };
 
 export const SnippetClientPage: FC<PageProps> = (props) => {
   return (
