@@ -7,8 +7,8 @@ import { ComplexComponentTreeSectionClient } from "@/components/ComplexComponent
 import { FC } from "react";
 import { FooForm } from "@/components/FooForm/FooForm";
 import { NavBar } from "@/components/NavBar";
-// import { SnippetsSection } from "@/components/SnippetSection/SnippetsSection";
-// import SyntaxHighlighter from "react-syntax-highlighter";
+import { SnippetsSection } from "@/components/SnippetSection/SnippetsSection";
+import SyntaxHighlighter from "react-syntax-highlighter";
 import _ from "lodash";
 import { docco } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 import moment from "moment";
@@ -19,19 +19,22 @@ export interface SnippetProps {
   snippet: SnippetData;
 }
 
-// export const SnippetClient: FC<SnippetProps> = ({ snippet }) => {
-//   const a = moment().format("MMMM Do YYYY, h:mm:ss a");
-//   return (
-//     <div className="z-10 max-w-5xl w-full items-center text-sm mb-8">
-//       <h3 className="text-m font-bold mb-3">{snippet.title}</h3>
-//       <div className="mb-3">{snippet.description}</div>
-//       <SyntaxHighlighter language={snippet.language} style={docco}>
-//         {snippet.code}
-//       </SyntaxHighlighter>
-//     </div>
-//   );
-// };
-
+export const SnippetClient: FC<SnippetProps> = ({ snippet }) => {
+  const a = moment().format("MMMM Do YYYY, h:mm:ss a");
+  return (
+    <div className="z-10 max-w-5xl w-full items-center text-sm mb-8">
+      <h3 className="text-m font-bold mb-3">{snippet.title}</h3>
+      <div className="mb-3">{snippet.description}</div>
+      <SyntaxHighlighter language={snippet.language} style={docco}>
+        {snippet.code}
+      </SyntaxHighlighter>
+    </div>
+  );
+};
+// 76.2 base
+// with form - 141
+// with complex components 78.1
+// with code snippets 397 kb
 export const SnippetClientPage: FC<PageProps> = (props) => {
   return (
     <main className="font-mono">
@@ -40,14 +43,14 @@ export const SnippetClientPage: FC<PageProps> = (props) => {
         className="px-3"
         style={{ maxWidth: 1600, margin: "0px auto", padding: "0px 3rem" }}
       >
-        <FooForm />
-        {/* <SnippetsSection
+        {/* <FooForm /> */}
+        <SnippetsSection
           snippetList={props.snippets.map((s, i) => (
             <SnippetClient key={i} snippet={s} />
             // <Snippet key={i} snippet={s} />
           ))}
-        /> */}
-        <ComplexComponentTreeSectionClient />
+        />
+        {/* <ComplexComponentTreeSectionClient /> */}
       </div>
     </main>
   );

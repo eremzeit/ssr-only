@@ -12,7 +12,7 @@ export const ComplexComponentTreeSection: FC<{}> = ({}) => {
   return (
     <Section>
       <SectionHeader>
-        About 150 uniquely generated component definitions (to simulate app
+        About 200 uniquely generated component definitions (to simulate app
         bloat)
       </SectionHeader>
       <SectionContent>
