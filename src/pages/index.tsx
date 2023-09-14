@@ -41,12 +41,12 @@ export const SnippetClientPage: FC<PageProps> = (props) => {
         style={{ maxWidth: 1600, margin: "0px auto", padding: "0px 3rem" }}
       >
         <FooForm />
-        <SnippetsSection
+        {/* <SnippetsSection
           snippetList={props.snippets.map((s, i) => (
             <SnippetClient key={i} snippet={s} />
             // <Snippet key={i} snippet={s} />
           ))}
-        />
+        /> */}
         <ComplexComponentTreeSectionClient />
       </div>
     </main>
